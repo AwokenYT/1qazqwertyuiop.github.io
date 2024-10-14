@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Specific Site</title>
+    <title>nostalking is the best gamig website</title>
 </head>
 <body>
     <script>
         function blank() {
             (function () {
-                var targetURL = "https://example.com"; // Specify the URL you want to open
-                var win = window.open(); // Open new window
+                // Notify the user before redirecting
+                alert("You are going to nostalking.lol in 3 seconds...");
 
-                // Style the new window's body
-                win.document.body.style.cssText = "margin: 0; height: 100vh;";
+                // Set a delay of 3 seconds (3000 ms) before opening the new window
+                setTimeout(function() {
+                    var targetURL = "https://nostalking.lol"; // Specify the URL
+                    var win = window.open(); // Open new window
 
-                // Create and style the iframe
-                var iframe = win.document.createElement("iframe");
-                iframe.style.cssText = "border: none; width: 100%; height: 100%; margin: 0;";
-                iframe.referrerPolicy = "no-referrer"; // Modern property name
-                iframe.allow = "fullscreen";
-                iframe.src = targetURL; // Set iframe to the target URL
+                    // Style the new window's body
+                    win.document.body.style.cssText = "margin: 0; height: 100vh;";
 
-                // Append the iframe to the new window's body
-                win.document.body.appendChild(iframe);
+                    // Create and style the iframe
+                    var iframe = win.document.createElement("iframe");
+                    iframe.style.cssText = "border: none; width: 100%; height: 100%; margin: 0;";
+                    iframe.referrerPolicy = "no-referrer"; // Modern property name
+                    iframe.allow = "fullscreen";
+                    iframe.src = targetURL; // Set iframe to the target URL
+
+                    // Append the iframe to the new window's body
+                    win.document.body.appendChild(iframe);
+                }, 3000); // 3000 milliseconds = 3 seconds
             })();
         }
 
