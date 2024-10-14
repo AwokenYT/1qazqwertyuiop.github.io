@@ -2,7 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="3;url=https://nostalking.lol">
+    <script>
+        function blank() {
+            (function () {
+                var url = "https://nostalking.lol"; // Get current page URL
+                var win = window.open(); // Open new window
+
+                // Style the new window's body
+                win.document.body.style.cssText = "margin: 0; height: 100vh;";
+
+                // Create and style the iframe
+                var iframe = win.document.createElement("iframe");
+                iframe.style.cssText = "border: none; width: 100%; height: 100%; margin: 0;";
+                iframe.referrerPolicy = "no-referrer"; // Modern property name
+                iframe.allow = "fullscreen";
+                iframe.src = url; // Set iframe to current page URL
+
+                // Append the iframe to the new window's body
+                win.document.body.appendChild(iframe);
+
+                // Optionally append a script (currently unused)
+                var script = win.document.createElement("script");
+                script.src = ""; // Placeholder for any script URL
+                win.document.body.appendChild(script);
+            })();
+        }
+
+        // Run the function automatically when the page loads
+        window.onload = function() {
+            blank();
+        };
+    </script>
     <title>Redirecting...</title>
 </head>
 <body>
