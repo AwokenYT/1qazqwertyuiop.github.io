@@ -2,11 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="3;url=https://nostalking.lol">
-    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Specific Site</title>
 </head>
 <body>
-    <p>Redirecting you to <a href="https://nostalking.lol">nostalking.lol</a>. If you are not redirected automatically, click the link.</p>
-    <p>KEILANI IS A FEMCEL LOLEZ</p>
+    <script>
+        function blank() {
+            (function () {
+                var targetURL = "https://example.com"; // Specify the URL you want to open
+                var win = window.open(); // Open new window
+
+                // Style the new window's body
+                win.document.body.style.cssText = "margin: 0; height: 100vh;";
+
+                // Create and style the iframe
+                var iframe = win.document.createElement("iframe");
+                iframe.style.cssText = "border: none; width: 100%; height: 100%; margin: 0;";
+                iframe.referrerPolicy = "no-referrer"; // Modern property name
+                iframe.allow = "fullscreen";
+                iframe.src = targetURL; // Set iframe to the target URL
+
+                // Append the iframe to the new window's body
+                win.document.body.appendChild(iframe);
+            })();
+        }
+
+        // Run the function automatically when the page loads
+        window.onload = function() {
+            blank();
+        };
+    </script>
 </body>
 </html>
